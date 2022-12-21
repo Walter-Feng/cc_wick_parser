@@ -1,4 +1,4 @@
-import core
+import cc_wick_parser.core
 
 
 def parse(operator_string, occupation_type_dict=None):
