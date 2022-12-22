@@ -13,4 +13,4 @@ occupied / virtual orbitals during the contraction. The symbols follow the conve
 
 which can also be customized.
 
-Should be good to go, running the unit test, after exporting, the directory to this repository, to $PYTHONPATH.
+Should be good to go directly running the unit test, after exporting- the directory to this repository- to $PYTHONPATH.

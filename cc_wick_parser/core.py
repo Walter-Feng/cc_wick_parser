@@ -99,6 +99,7 @@ class DeltaPairs(object):
 def cc_parser_core(list_of_creation_operators: [Operator],
                    list_of_annihilation_operators: [Operator],
                    sign):
+
     initial_sign = sign * get_sign(list_of_creation_operators) * get_sign(list_of_annihilation_operators)
 
     permutations = itertools.permutations(list_of_creation_operators)
@@ -110,8 +111,10 @@ def cc_parser_core(list_of_creation_operators: [Operator],
                 check_has_pair_in_same_group(list_form_of_new_order, list_of_annihilation_operators):
             continue
 
-        sign = get_sign(list_form_of_new_order)
-        legit_pairs.append(DeltaPairs(list_form_of_new_order, list_of_annihilation_operators, sign * initial_sign))
+        sign_from_permutation = get_sign(list_form_of_new_order)
+        legit_pairs.append(DeltaPairs(list_form_of_new_order,
+                                      list_of_annihilation_operators,
+                                      sign_from_permutation * initial_sign))
 
     return legit_pairs
 
